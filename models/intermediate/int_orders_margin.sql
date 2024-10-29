@@ -7,4 +7,4 @@ SELECT
     SUM (purchase_cost) AS tot_purchase_cost
 FROM {{ref("int_sales_margin")}}
 GROUP BY orders_id, date_date
-ORDER date_date DESC 
+ORDER BY date_date DESC 
