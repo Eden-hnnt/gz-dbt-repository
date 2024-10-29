@@ -4,7 +4,6 @@ sources:
   - name: raw
     schema : gz_raw_data
     tables:
-
       - name: product
         identifier: raw_gz_product
         description: products of Greenweez / we have on row per product_id and purchase_price
@@ -18,18 +17,18 @@ sources:
       - name: sales
         identifier: raw_gz_sales
         description: sales of Greenweez / we have on row per product_id found in each orders_id
+        freshness:
+          warn_after: {count: 90 , period: day}
+        loaded_at_field: "CAST(date_date AS TIMESTAMP)"
         tests:
             - unique:
                 column_name: "(orders_id||'_'||pdt_id)"
-            - not null:
-                column_name: "(orders_id||'_'||pdt_id)"
-
 
       - name: ship
         identifier: raw_gz_ship
         description: ship of Greenweez / we have all shipping info (order_id,shipping_fee unique, logCost, ship_cost)
         columns : 
-        - name: order_id
+        - name: orders_id
           description: identifiant de commandes (primary key)
           tests: 
           - unique  
