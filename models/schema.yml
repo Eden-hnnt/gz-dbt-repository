@@ -4,12 +4,33 @@ sources:
   - name: raw
     schema : gz_raw_data
     tables:
+
       - name: product
         identifier: raw_gz_product
         description: products of Greenweez / we have on row per product_id and purchase_price
+        columns : 
+        - name: products_id
+          description: catalogue identifiant de produits (primary key)
+          tests: 
+          - unique  
+          - not_null
+
       - name: sales
         identifier: raw_gz_sales
         description: sales of Greenweez / we have on row per product_id found in each orders_id
+        tests:
+            - unique:
+                column_name: "(products_id||'_'|| orders_id)"
+            - not null:
+                column_name: "(products_id||'_'|| orders_id)"
+
+
       - name: ship
         identifier: raw_gz_ship
         description: ship of Greenweez / we have all shipping info (order_id,shipping_fee unique, logCost, ship_cost)
+        columns : 
+        - name: order_id
+          description: identifiant de commandes (primary key)
+          tests: 
+          - unique  
+          - not_null  
