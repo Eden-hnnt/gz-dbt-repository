@@ -20,9 +20,9 @@ sources:
         description: sales of Greenweez / we have on row per product_id found in each orders_id
         tests:
             - unique:
-                column_name: "(products_id||'_'|| orders_id)"
+                column_name: "(orders_id||'_'||pdt_id)"
             - not null:
-                column_name: "(products_id||'_'|| orders_id)"
+                column_name: "(orders_id||'_'||pdt_id)"
 
 
       - name: ship
