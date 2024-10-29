@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: gz_raw_data
+    schema : raw
     tables:
       - name: product
         identifier: raw_gz_product
