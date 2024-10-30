@@ -173,5 +173,13 @@ models:
         tests:
           - unique
 
+  - name: finance_campaigns_day
+    description: Jointure de toutes les infos campaign dans un même dataset // par jour
+    columns:
+      - name: date_date
+        description: Primary key.
+        tests:
+          - unique
+
 
 
