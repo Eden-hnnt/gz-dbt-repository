@@ -48,15 +48,15 @@ sources:
             description: identifiant de la campagne Adwords
           - name: camPGN_name
             description: nom de la campagne Adwords
-          - name: camPGN_name
-            description: nom de la campagne Adwords
           - name: ads_cost
             description: coût de la campagne Adwords
           - name: impression
             description: coût d'impression de la campagne Adwords
           - name: click
             description: coût par click de la campagne Adwords
-          
+        tests:
+          - unique:
+              column_name: "( camPGN_name|| '_' || date_date)"  
 
       - name: Bing
         identifier: raw_gz_bing
@@ -70,14 +70,15 @@ sources:
             description: identifiant de la campagne Bing
           - name: camPGN_name
             description: nom de la campagne Bing
-          - name: camPGN_name
-            description: nom de la campagne Bing
           - name: ads_cost
             description: coût de la campagne Bing
           - name: impression
             description: coût d'impression de la campagne Bing
           - name: click
             description: coût par click de la campagne Bing
+        tests:
+          - unique:
+              column_name: "( camPGN_name|| '_' || date_date)"  
 
       - name: Criteo
         identifier: raw_gz_criteo
@@ -91,14 +92,15 @@ sources:
             description: identifiant de la campagne Criteo
           - name: camPGN_name
             description: nom de la campagne Criteo
-          - name: camPGN_name
-            description: nom de la campagne Criteo
           - name: ads_cost
             description: coût de la campagne Criteo
           - name: impression
             description: coût d'impression de la campagne Criteo
           - name: click
             description: coût par click de la campagne Criteo
+        tests:
+          - unique:
+              column_name: "( camPGN_name|| '_' || date_date)"  
 
       - name: Facebook
         identifier: raw_gz_facebook
@@ -112,15 +114,15 @@ sources:
             description: identifiant de la campagne Facebook
           - name: camPGN_name
             description: nom de la campagne Facebook
-          - name: camPGN_name
-            description: nom de la campagne Facebook
           - name: ads_cost
             description: coût de la campagne Facebook
           - name: impression
             description: coût d'impression de la campagne Facebook
           - name: click
             description: coût par click de la campagne Facebook
-
+        tests:
+          - unique:
+              column_name: "( camPGN_name|| '_' || date_date)"  
 
 
 
