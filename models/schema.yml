@@ -36,6 +36,94 @@ sources:
               - unique  
               - not_null  
 
+      - name: Adwords
+        identifier: raw_gz_adwords
+        description: Adwords campaign
+        columns: 
+          - name: date_date
+            description: date de la campagne Adwords
+          - name: paid_source
+            description: source de paiement Adwords
+          - name: campaign_key
+            description: identifiant de la campagne Adwords
+          - name: camPGN_name
+            description: nom de la campagne Adwords
+          - name: camPGN_name
+            description: nom de la campagne Adwords
+          - name: ads_cost
+            description: coût de la campagne Adwords
+          - name: impression
+            description: coût d'impression de la campagne Adwords
+          - name: click
+            description: coût par click de la campagne Adwords
+          
+
+      - name: Bing
+        identifier: raw_gz_bing
+        description: Bing campaign
+        columns: 
+          - name: date_date
+            description: date de la campagne Bing
+          - name: paid_source
+            description: source de paiement Bing
+          - name: campaign_key
+            description: identifiant de la campagne Bing
+          - name: camPGN_name
+            description: nom de la campagne Bing
+          - name: camPGN_name
+            description: nom de la campagne Bing
+          - name: ads_cost
+            description: coût de la campagne Bing
+          - name: impression
+            description: coût d'impression de la campagne Bing
+          - name: click
+            description: coût par click de la campagne Bing
+
+      - name: Criteo
+        identifier: raw_gz_criteo
+        description: Criteo campaign
+        columns: 
+          - name: date_date
+            description: date de la campagne Criteo
+          - name: paid_source
+            description: source de paiement Criteo
+          - name: campaign_key
+            description: identifiant de la campagne Criteo
+          - name: camPGN_name
+            description: nom de la campagne Criteo
+          - name: camPGN_name
+            description: nom de la campagne Criteo
+          - name: ads_cost
+            description: coût de la campagne Criteo
+          - name: impression
+            description: coût d'impression de la campagne Criteo
+          - name: click
+            description: coût par click de la campagne Criteo
+
+      - name: Facebook
+        identifier: raw_gz_facebook
+        description: Facebook campaign
+        columns: 
+          - name: date_date
+            description: date de la campagne Facebook
+          - name: paid_source
+            description: source de paiement Facebook
+          - name: campaign_key
+            description: identifiant de la campagne Facebook
+          - name: camPGN_name
+            description: nom de la campagne Facebook
+          - name: camPGN_name
+            description: nom de la campagne Facebook
+          - name: ads_cost
+            description: coût de la campagne Facebook
+          - name: impression
+            description: coût d'impression de la campagne Facebook
+          - name: click
+            description: coût par click de la campagne Facebook
+
+
+
+
 models:
   - name: int_orders_margin
     description: Orders margin details.
@@ -71,4 +159,6 @@ models:
         tests:
           - unique
           - not_null
+
+
 
