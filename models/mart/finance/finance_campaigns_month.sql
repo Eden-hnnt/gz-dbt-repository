@@ -1,5 +1,5 @@
-SELECT *,
-    FORMAT_DATE('%Y-%m',DATE (c.date_date)) AS date_month,
+SELECT
+    FORMAT_DATE('%Y-%m',DATE (date_date)) AS datemonth,
     ROUND (SUM (ads_margin),1) AS ads_margin_month,
     ROUND (SUM (ads_cost),1) AS ads_cost_month, 
     ROUND (SUM (ads_impression),1) AS ads_impression_month, 
