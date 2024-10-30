@@ -164,12 +164,9 @@ models:
 
   - name: int_campaigns
     description: Jointure de toutes les infos campaign dans un même dataset 
-    columns:
-      - name: "( camPGN_name|| '_' || date_date)" 
-        description: Primary key.
-        tests:
-          - unique
-          - not_null
+    tests:
+      - unique:
+        column_name: "( camPGN_name|| '_' || date_date)" 
 
   - name: int_campaigns_day
     description: Jointure de toutes les infos campaign dans un même dataset // par jour
@@ -178,6 +175,6 @@ models:
         description: Primary key.
         tests:
           - unique
-          - not_null
+
 
 

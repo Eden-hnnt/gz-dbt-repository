@@ -10,4 +10,4 @@
  UNION ALL
  SELECT *
  FROM {{ref('stg_raw__Facebook')}}
-ORDER BY paid_source
+ORDER BY date_date
