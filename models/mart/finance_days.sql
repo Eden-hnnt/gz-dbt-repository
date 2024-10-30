@@ -1,3 +1,8 @@
+{{ config(
+  materialized='table',
+  full_refresh=true
+) }}
+
 SELECT
 date_date,
 COUNT (orders_id) AS numb_orders,
