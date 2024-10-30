@@ -1,7 +1,3 @@
-{{ config(
-  materialized='table',
-  full_refresh=true
-) }}
 
 SELECT
 date_date,
